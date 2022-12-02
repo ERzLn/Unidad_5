@@ -18,7 +18,7 @@ public class Invierno {
     public Invierno(int n) {
         ar= new double[n];
         for (int i = 0; i < ar.length; i++) {
-            System.out.println("Introduce la " + i + "º temperatura: ");
+            System.out.println("Introduce la " + (i+1) + "º temperatura: ");
             Scanner entrada = new Scanner(System.in);
             ar[i] = entrada.nextDouble();
         }
@@ -29,23 +29,30 @@ public class Invierno {
         double tempMedia = 0;
         for (int i = 0; i < ar.length; i++) {
             tempMedia += ar[i];
+            
         }
-        return tempMedia;
+        return (tempMedia/ar.length);
     }
 
-    public void fahrenheit() {
-        for (int i = 0; i < ar.length; i++) {
-            double[] ar2 = new double[ar.length];
-            ar2[i] = (ar[i] * 1.8 + 32);
-            System.out.println("fahrenheit " + (i + 1) + "= " + ar2[i]);
+    public double[] fahrenheit() {
+         double[] ar2 = new double[ar.length];
+        for (int i = 0; i < ar.length; i++) {           
+            ar2[i] = (ar[i] * 1.8 + 32);            
         }
+        return ar2;
     }
 
-    @Override
-    public String toString() {
-       return "";
+    
+    public String mostrar(double ar[]) {
+       String cadena="";
+       for (int i=0; i<ar.length;i++){
+           cadena+=ar[i]+", ";
+       }
+       return cadena;       
+    }
 
-       
+    public double[] getAr() {
+        return ar;
     }
 
 }
