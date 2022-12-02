@@ -22,7 +22,7 @@ public class U4Hoja1Ej1v2 {
                 for (int auxI = 0; auxI < i; auxI++) { //Creo un bucle pasando los numeros anteriores al 'i' actual.
                     if (ar[auxI] == ar[i]) { //Si alguno de los numeros anteriores a 'i' fuesen = que 'i'
                         ar[i] = (int) Math.floor(Math.random() * (m - n + 1)) + n; //generamos otro numero aleatorio
-                        auxI = -1; //como hemos generado otro numero aleatorio, reiniciamos el contador para volver a comprobarlo
+                        auxI = -1; //como hemos generado otro numero aleatorio, reiniciamos el contador a -1 porque nos va a hacer i++ para volver a comprobarlo
                     }             //si esto ultimo se hace volvemos a la linea 22 hasta que no coincida con ningún numero 
                 }                 //Ahora parece sencillo, pero ha sido un follón jaja
             }
