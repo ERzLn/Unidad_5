@@ -11,11 +11,11 @@ import java.util.Scanner;
  * @author Eloy
  */
 public class Operaciones {
-    private int [] ar=new int[5];
+    private int [] ar;
     
     
     public Operaciones() {
-        
+        ar=new int[5];
         for(int i=0;i<ar.length;i++){
             System.out.println("Introduce el numero "+(i+1));
             Scanner entrada=new Scanner(System.in);
