@@ -12,9 +12,10 @@ import java.util.Scanner;
  */
 public class Vectores {
 
-    private int[] ar = new int[5];
+    private int[] ar;
 
     public Vectores() {
+        ar=new int[5];
         for (int i = 0; i < ar.length; i++) {
             System.out.println("Introduce el numero " + (i + 1) + "º: ");
             Scanner entrada = new Scanner(System.in);
