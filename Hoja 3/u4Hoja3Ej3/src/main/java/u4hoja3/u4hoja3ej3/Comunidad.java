@@ -26,10 +26,10 @@ public class Comunidad {
     }
 
     public void mostrar() {
-
+        System.out.println(nombreComunidad.toUpperCase());
         for (int i = provincias.length - 1; i >= 0; i--) {
             if (provincias[i].length() >= 4) {
-                String provCad = provincias[i].toUpperCase().substring(0, 4);
+                String provCad = provincias[i].substring(0, 4);
                 System.out.println(provCad + " ");
             } else {
                 System.out.println("Provincia con solo " + String.valueOf(provincias[i].length()) + " letras");
@@ -37,7 +37,7 @@ public class Comunidad {
         }
     }
     public String sorteo(){
-        int numAzar=(int)(Math.floor(Math.random()*provincias.length));
+        int numAzar=(int)(Math.floor(Math.random()*provincias.length)+1);
         String sorteo=provincias[numAzar];
         return sorteo;
     }
@@ -45,7 +45,7 @@ public class Comunidad {
         int posProvincia = -1;
         for (int i = 0; i < provincias.length ; i++) {
             if ((provincias[i].toUpperCase()).contains(nomProvincia.toUpperCase())) {
-                posProvincia = (i + 1);
+                posProvincia = i;
             }           
         }
         return posProvincia;
