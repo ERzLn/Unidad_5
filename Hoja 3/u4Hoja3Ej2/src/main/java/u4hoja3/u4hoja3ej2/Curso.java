@@ -26,9 +26,8 @@ public class Curso {
     }
 
     public void iniciales() {
-        for (int i = 0; i < ar.length; i++) {
-            String iniciales = ar[i].substring(0, 1) + ".";
-            System.out.print(iniciales);
+        for (int i = 0; i < ar.length; i++) {            ;
+            System.out.print(ar[i].substring(0, 1) + ".");
 
         }
         System.out.println("");
