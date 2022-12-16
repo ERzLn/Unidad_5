@@ -58,7 +58,7 @@ public class U4Hoja4ej1 {
           System.out.println();
                 
             }case 5->{
-                System.out.println("Diagonal inversa:");
+                System.out.println("Diagonal hacia arriba:");
                 for (int i=matriz1.length-1;i>=0;i--){
                     System.out.print(matriz1[i][i]+" ");
                 }
