@@ -62,7 +62,7 @@ public class U4Hoja4ej1 {
                 for (int i=matriz1.length-1;i>=0;i--){
                     System.out.print(matriz1[i][i]+" ");
                 }
-                System.out.println();
+                System.out.println(); 
                 
             }
         }}
