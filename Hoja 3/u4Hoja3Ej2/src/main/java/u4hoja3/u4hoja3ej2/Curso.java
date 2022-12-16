@@ -26,9 +26,8 @@ public class Curso {
     }
 
     public void iniciales() {
-        for (int i = 0; i < ar.length; i++) {
-            String iniciales = ar[i].substring(0, 1) + ".";
-            System.out.print(iniciales);
+        for (int i = 0; i < ar.length; i++) {;
+            System.out.print(ar[i].substring(0, 1) + ".");
 
         }
         System.out.println("");
@@ -41,21 +40,28 @@ public class Curso {
 
             if (i > 0) {
                 ar[i] = ar[i - 1];
-            } else if (i == 0) {
-                ar[0] = ultimo;
             }
+            ar[0] = ultimo;
+
         }
         for (int i = 0; i <= ar.length - 1; i++) {
             System.out.print(ar[i] + " ");
-            if(i==ar.length-1)System.out.println("");
+            if (i == ar.length - 1) {
+                System.out.println("");
+            }
         }
     }
-    public void verNombre(int posicion){
-        System.out.println("El nombre del alumno en la posición "+posicion+" es: "+ar[(posicion-1)]);        
+
+    public void verNombre(int posicion) {
+        if (posicion >= ar.length) {
+            System.out.println("El nombre del alumno en la posición " + posicion + " es: " + ar[(posicion - 1)]);
+        } else {
+            System.out.println("Numero no valido");
+        }
     }
-    public boolean esDaw(){
-        String subcadena="DAW";
-        return nombreCurso.toUpperCase().contains(subcadena);
+
+    public boolean esDaw() {
+        return nombreCurso.toUpperCase().contains("DAW");
     }
 
 }
