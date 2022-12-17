@@ -13,6 +13,7 @@ public class Figura {
     private char[][] matriz;
     private char letra;
     int n;
+
     public Figura(int n) {
         letra = 'L';
         matriz = new char[n][n];
@@ -22,6 +23,7 @@ public class Figura {
             }
         }
     }
+
     public String cuadrado() {
         String dibujo = "";
         for (int i = 0; i < matriz.length; i++) {
@@ -53,6 +55,23 @@ public class Figura {
             }
         }
         return dibujo;
-
     }
+
+    public String aspa() {
+        String resultado = "";
+    for (int i = 0; i < matriz.length; i++) {
+      for (int j = 0; j < matriz[i].length; j++) {
+        if (i == j || i == matriz.length-1 - j ) {
+          matriz[i][j] = letra;
+          resultado += letra;
+        } else {
+          matriz[i][j] = ' ';
+          resultado += ' ';
+        }
+      }
+      resultado += "\n";
+    }
+    return resultado;
+  
+}
 }

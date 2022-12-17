@@ -12,8 +12,10 @@ package hoja5.u4hoja5ej1;
 public class U4Hoja5Ej1 {
 
     public static void main(String[] args) {
-        Figura figura=new Figura(10);
+        Figura figura=new Figura(8);
         System.out.println(figura.cuadrado());
         System.out.println(figura.cuadradoVacio());
+        System.out.println();
+        System.out.println(figura.aspa());
     }
 }
