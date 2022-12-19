@@ -19,32 +19,33 @@ public class Serie {
         this.variable = variable;
         Scanner entrada = new Scanner(System.in);
         System.out.println("Cuantos numeros quieres ingresar?: ");
-        int numeros=entrada.nextInt();
-        serie=new double[numeros];
-                
+        int numeros = entrada.nextInt();
+        serie = new double[numeros];
+
         for (int i = 0; i < serie.length; i++) {
             System.out.println("Introduce la posición " + (i + 1) + " :");
             serie[i] = entrada.nextDouble();
         }
     }
 
-public double resultado(){
-        double total=0;
+    public double resultado() {
+        double total = 0;
         switch (variable) {
             case '+' -> {
-                total=0;
-                for(int i=0;i<serie.length;i++){
-                    total+=serie[i];
+                total = 0;
+                for (int i = 0; i < serie.length; i++) {
+                    total += serie[i];
                 }
             }
             case '*' -> {
-                total=1;
-                for(int i=0;i<serie.length;i++){
-                    total*=serie[i];
+                total = 1;
+                for (int i = 0; i < serie.length; i++) {
+                    total *= serie[i];
                 }
             }
-            default -> System.out.println("Variable introducida INCORRECTA");
+            default ->
+                System.out.println("Variable introducida INCORRECTA");
         }
         return total;
     }
-    }
+}
