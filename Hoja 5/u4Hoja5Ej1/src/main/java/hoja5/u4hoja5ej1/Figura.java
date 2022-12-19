@@ -12,20 +12,15 @@ public class Figura {
 
     private char[][] matriz;
     private char letra;
-    int n;
 
     public Figura(int n) {
         letra = 'L';
         matriz = new char[n][n];
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = ' ';
-            }
-        }
     }
 
     public String cuadrado() {
         String dibujo = "";
+        
         for (int i = 0; i < matriz.length; i++) {
             dibujo += "\n";
             for (int j = 0; j < matriz[i].length; j++) {
@@ -46,7 +41,7 @@ public class Figura {
                     matriz[i][j] = letra;
                     dibujo += matriz[i][j];
                 }
-                if (j == matriz.length - 1 && i != 0 && i != matriz.length - 1) {
+                else if(j == matriz.length - 1 && i != 0 && i != matriz.length - 1) {
                     for (int l = 0; l < matriz.length - 2; l++) {
                         dibujo += espacio;
                     }
@@ -59,19 +54,19 @@ public class Figura {
 
     public String aspa() {
         String resultado = "";
-    for (int i = 0; i < matriz.length; i++) {
-      for (int j = 0; j < matriz[i].length; j++) {
-        if (i == j || i == matriz.length-1 - j ) {
-          matriz[i][j] = letra;
-          resultado += letra;
-        } else {
-          matriz[i][j] = ' ';
-          resultado += ' ';
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (i == j || i == matriz.length - 1 - j) {
+                    matriz[i][j] = letra;
+                    resultado += letra;
+                } else {
+                    matriz[i][j] = ' ';
+                    resultado += ' ';
+                }
+            }
+            resultado += "\n";
         }
-      }
-      resultado += "\n";
+        return resultado;
+
     }
-    return resultado;
-  
-}
 }
