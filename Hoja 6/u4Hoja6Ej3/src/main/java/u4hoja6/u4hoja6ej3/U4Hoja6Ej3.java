@@ -28,7 +28,9 @@ public class U4Hoja6Ej3 {
                 
                 case 2 ->{ agenda1.mostrar();
                 System.out.println();}
-                case 3 ->{ agenda1.buscar();
+                case 3 ->{System.out.println("Introduce el nombre a buscar: ");
+                String nombre=entrada.nextLine();
+                    agenda1.buscar(nombre);
                 System.out.println();}
                 case 4 ->{ System.out.println("En la agenda hay "+ agenda1.contador+" contactos registrados.");
                 System.out.println();}
