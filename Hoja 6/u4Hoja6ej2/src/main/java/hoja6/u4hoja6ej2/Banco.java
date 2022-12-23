@@ -52,13 +52,14 @@ public class Banco {
     }
     public void mostrar(int idCliente){
         
-        for(int i=idCliente-1;i<contador;i++){
+        for(int i=0;i<contador;i++){
+            if ((idCliente-1)==i){
             System.out.println("Numero cliente: "
                      +(banco[i].getCodigo()+1)+
                     "\n"+banco[i].getNombre()+
                     "\n"+banco[i].getTelefono()+
                     "\n"+banco[i].getSaldo()+"€");
-        }
+        }}
     }
     
 }
