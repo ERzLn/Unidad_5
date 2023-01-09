@@ -19,22 +19,18 @@ public class FechasHoja1Ej1 {
         Letra[] letra = new Letra[n];
         for (int i = 0; i < n; i++) {
             letra[i] = new Letra();
-        }
-
-        for (int i = 0; i < n; i++) {
             if (letra[i].vencida()) {
                 System.out.println();
                 System.out.println("Letra Vencida: ");
                 letra[i].mostrar();
-                if (letra[i].devuelveMes() == 1) {
+                if (letra[i].devuelveMes().equalsIgnoreCase("enero")) {
                     letra[i].demora(15);
                 }
             } else {
-              System.out.println();            
-              System.out.println("Letra no vencida: ");
-              letra[i].mostrar();}
-
+                System.out.println();
+                System.out.println("Letra no vencida: ");
+                letra[i].mostrar();
+            }
         }
-
     }
 }
