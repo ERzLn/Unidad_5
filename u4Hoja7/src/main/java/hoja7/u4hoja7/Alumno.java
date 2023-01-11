@@ -41,16 +41,16 @@ public class Alumno {
     }
     public int buscar(int posicion){
         Arrays.sort(notas);
-        return notas[(posicion-1)];
-        
+        return notas[(posicion-1)];        
         }
-    public void tresMejores(){
+    public int[] tresMejores(){
         Arrays.sort(notas);
-        int notasCopia[]=Arrays.copyOfRange(notas, 2, 5);
+        /*int notasCopia[]=Arrays.copyOfRange(notas, 2, 5);
         System.out.println("Las tres mejores notas son: ");
         for(int i=0;i<notasCopia.length;i++){
             System.out.println( notasCopia[i]);
-        }
+        }*/
+        return Arrays.copyOfRange(notas, notas.length-3, notas.length);
     }
     
 
