@@ -23,7 +23,11 @@ public class U4Hoja7 {
         alumno.tresMejores();
         
         System.out.println("Las notas se ponen a cero");
-        alumno.ponerACero();
-        alumno.tresMejores();
+        
+        System.out.println("Las tres mejores notas son:");
+        int[]copia=alumno.tresMejores();
+        for(int i=0;i<alumno.tresMejores().length;i++){
+            System.out.println(copia[i]);
+        }
     }
 }
