@@ -11,4 +11,5 @@
         <maven.compiler.target>18</maven.compiler.target>
         <exec.mainClass>hojamain.u4hoja8ej2.U4Hoja8Ej2</exec.mainClass>
     </properties>
+    <name>u4Hoja8Ej1</name>
 </project>
