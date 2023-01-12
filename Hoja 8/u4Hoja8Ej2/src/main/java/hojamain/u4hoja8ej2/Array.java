@@ -56,37 +56,42 @@ public class Array {
             }
         }
     }
-    public void rotarDerecha(){
-        int ultimo=vector[(vector.length-1)];        
-        for(int i=(vector.length-1);i>=0;i--){
-            if(i>0){
-                vector[i]=vector[(i-1)];
-            }
-            else{
-                vector[i]=ultimo;
-            }
-        }
-    }
-    public void comparar(Array a){
-        
-        for(int i=0;i<vector.length;i++){
-            for(int j=0;j<a.vector.length;j++){
-                if(vector[i]==a.vector[j])System.out.println("Coincide: "+vector[i]);                
+
+    public void rotarDerecha() {
+        int ultimo = vector[(vector.length - 1)];
+        for (int i = (vector.length - 1); i >= 0; i--) {
+            if (i > 0) {
+                vector[i] = vector[(i - 1)];
+            } else {
+                vector[i] = ultimo;
             }
         }
     }
-    public void sumaPares(){
-        int suma=0;
-        for(int i=0;i<vector.length;i++){
-            if(vector[i]%2==0){
-              suma+=vector[i];  
+
+    public void comparar(Array a) {
+
+        for (int i = 0; i < vector.length; i++) {
+            for (int j = 0; j < a.vector.length; j++) {
+                if (vector[i] == a.vector[j]) {
+                    System.out.println("Coincide: " + vector[i]);
+                }
             }
         }
-        System.out.println("La suma de los numeros pares es: "+suma);
     }
-    public void multiplos(int num){
-        for(int i=0;i<vector.length;i++){
-            vector[i]=(i+1)*num;            
+
+    public void sumaPares() {
+        int suma = 0;
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] % 2 == 0) {
+                suma += vector[i];
+            }
+        }
+        System.out.println("La suma de los numeros pares es: " + suma);
+    }
+
+    public void multiplos(int num) {
+        for (int i = 0; i < vector.length; i++) {
+            vector[i] = (i + 1) * num;
         }
     }
 
