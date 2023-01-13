@@ -44,7 +44,6 @@ public class Array {
 
     public void modificar(int num, int pos) {
         if (pos >= 0 && pos < vector.length) {
-
             vector[(pos - 1)] = num;
         }
     }
