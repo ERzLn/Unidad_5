@@ -82,7 +82,7 @@ public class Pais {
     @Override
     public String toString() {
         String datosPais = "";
-        for (int i = 0; i <= numCiudades; i++) {
+        for (int i = 0; i < numCiudades; i++) {
             datosPais = "Ciudades de " + pais + ": \n  " +
                     ciudades[i].getNomCiudad()+":\n  Población: "+
                     ciudades[i].getHabitantes()+"\n  Latitud: "+
