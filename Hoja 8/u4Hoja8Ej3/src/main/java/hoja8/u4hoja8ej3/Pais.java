@@ -87,7 +87,7 @@ public class Pais {
                     ciudades[i].getNomCiudad()+":\n  Población: "+
                     ciudades[i].getHabitantes()+"\n  Latitud: "+
                     ciudades[i].getLatitud()+" Longitud: "+
-                    ciudades[i].getLongitud();
+                    ciudades[i].getLongitud()+"\n ";
         }
         return datosPais;
     }
