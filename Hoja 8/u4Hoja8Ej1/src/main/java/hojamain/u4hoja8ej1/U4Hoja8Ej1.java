@@ -15,7 +15,7 @@ public class U4Hoja8Ej1 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         Array arr = new Array();
-        Array a = new Array();
+        
         int opcion;
         do {
             System.out.println("---- INTRODUCE LA OPCION ---");
@@ -58,6 +58,7 @@ public class U4Hoja8Ej1 {
                     arr.rotarDerecha();
 
                 case 7 -> {
+                    Array a = new Array();
                     a.introducir();
                     arr.comparar(a);
                 }
@@ -72,6 +73,8 @@ public class U4Hoja8Ej1 {
                 }
                 case 0 ->
                     System.out.println("¡¡HASTA LA PROXIMA!!");
+                    
+                default -> System.out.println("OPCIÓN NO VALIDA");
             }
         } while (opcion != 0);
 

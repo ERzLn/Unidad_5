@@ -16,12 +16,11 @@ public class Array {
 
     public Array() {
         this.vector = new int[10];
-
     }
 
     public void mostrar() {
         for (int i = 0; i < vector.length; i++) {
-            System.out.println("Vector " + i + " = " + vector[i]);
+            System.out.println("Vector " + (i+1) + " = " + vector[i]);
         }
     }
 
@@ -46,6 +45,7 @@ public class Array {
         if (pos >= 0 && pos < vector.length) {
             vector[(pos - 1)] = num;
         }
+        else System.out.println("La posicion introducida es incorrecta");
     }
 
     public void rotarIzquierda() {
@@ -61,25 +61,22 @@ public class Array {
 
     public void rotarDerecha() {
         int ultimo = vector[(vector.length - 1)];
-        for (int i = (vector.length - 1); i >= 0; i--) {
-            if (i > 0) {
+        for (int i = (vector.length - 1); i > 0; i--) {            
                 vector[i] = vector[(i - 1)];
-            } else {
-                vector[i] = ultimo;
-            }
+            } 
+                vector[0] = ultimo;            
         }
-    }
-
+    
+    
     public void comparar(Array a) {
 
         for (int i = 0; i < vector.length; i++) {
-            for (int j = 0; j < a.vector.length; j++) {
-                if (vector[i] == a.vector[j]) {
+                if (vector[i] == a.vector[i]) {
                     System.out.println("Coincide: " + vector[i]);
                 }
             }
         }
-    }
+    
 
     public void sumaPares() {
         int suma = 0;
