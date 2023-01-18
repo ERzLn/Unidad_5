@@ -13,15 +13,17 @@ public class Pajaro {
     private int edad;
     private String color;
 
-    public Pajaro() {        
+    public Pajaro() {  
+        nuevoPajaro();
     }
 
     public Pajaro(int edad, String color) {
         this.edad = edad;
-        this.color = color;        
+        this.color = color;
+        nuevoPajaro();        
     }
     
-    public static void nuevoPajaro(){
+    private static void nuevoPajaro(){
         numPajaros++;
     }
     public static void muestraPajaro(){
