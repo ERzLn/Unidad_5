@@ -20,11 +20,11 @@ public class AparatoElectrico {
         Scanner entrada=new Scanner(System.in);
         potencia=entrada.nextDouble();
         encendido=false;
-        System.out.println("Consumo total (Kw): "+consumoTotal+"Kw");
+        System.out.println("Consumo total (Kw): "+consumoTotal+" Kw");
     }
     public void encender(){
         encendido=true;
         consumoTotal+=potencia;
-        System.out.println("Consumo total (Kw): "+consumoTotal+"Kw");
+        System.out.println("Consumo total (Kw): "+consumoTotal+" Kw");
     }
 }
