@@ -12,10 +12,12 @@ package hoja1.u5hoja1ej2;
 public class U5Hoja1Ej2 {
 
     public static void main(String[] args) {
-        Bombilla.estadoIcp();
+        Bombilla.pulsarIcp();
         Bombilla bombilla1=new Bombilla();
-        bombilla1.estadoInterruptor();
-        if(bombilla1.estadoBombilla()) System.out.println("La bombilla está encendida.");
-        else System.out.println("La bombilla está apagada");
+        bombilla1.pulsaInterruptor();
+        System.out.println(bombilla1.luce());
+        System.out.println(Bombilla.getIcp());
+        Bombilla.pulsarIcp();
+        System.out.println(Bombilla.getIcp());
     }
 }

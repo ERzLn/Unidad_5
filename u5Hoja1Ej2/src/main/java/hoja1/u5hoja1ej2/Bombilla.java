@@ -10,27 +10,36 @@ import java.util.Scanner;
  *
  * @author DAW122
  */
+enum Estado{
+    ON, OFF
+}
 public class Bombilla {
-    public static boolean icp;
-    private boolean interruptor;
-
+    public static Estado icp=Estado.OFF;
+    private Estado interruptor;
+    
     public Bombilla() {
+        interruptor=Estado.OFF;
     }
-    public boolean estadoInterruptor(){
-        System.out.println("Interruptor encendido?:");
-        Scanner entrada=new Scanner(System.in);
-        String estado=entrada.nextLine();
-        interruptor=estado.equalsIgnoreCase("SI");
-        return interruptor;
+    public void pulsaInterruptor(){
+        if(interruptor == Estado.ON){
+            interruptor = Estado.OFF;
+        }
+        else{
+            interruptor = Estado.ON;
+        }
     }
-    public static boolean estadoIcp(){
-        System.out.println("Icp encendido?:");
-        Scanner entrada=new Scanner(System.in);
-        String estado=entrada.nextLine();
-        icp=estado.equalsIgnoreCase("SI");
+    public static void pulsarIcp(){
+        if(icp == Estado.ON){
+            icp=Estado.OFF;            
+        }
+        else{
+            icp=Estado.ON;
+        }
+    }
+    public static Estado getIcp(){
         return icp;
     }
-    public boolean estadoBombilla(){
-        return icp&&interruptor;
+    public boolean luce(){
+        return (interruptor == Estado.ON) && (icp ==Estado.ON);
     }
 }
