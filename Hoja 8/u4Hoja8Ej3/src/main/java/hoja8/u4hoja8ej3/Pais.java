@@ -70,13 +70,11 @@ public class Pais {
     }
 
     public long poblacionMedia() {
-        long suma = 0;
-        int contador = 0;
+        long suma = 0;        
         for (int i = 0; i < numCiudades; i++) {
-            suma += ciudades[i].getHabitantes();
-            contador++;
+            suma += ciudades[i].getHabitantes();            
         }
-        return (suma / contador);
+        return (suma / numCiudades);
     }
 
     @Override
