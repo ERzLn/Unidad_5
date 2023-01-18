@@ -12,6 +12,7 @@ package hoja1.u5hoja1ej1;
 public class U5Hoja1Ej1 {
 
     public static void main(String[] args) {
-        
+        Pajaro.nuevoPajaro();
+        Pajaro.muestraPajaro();
     }
 }
