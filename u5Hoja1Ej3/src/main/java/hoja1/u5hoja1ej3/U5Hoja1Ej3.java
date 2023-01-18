@@ -14,8 +14,8 @@ public class U5Hoja1Ej3 {
     public static void main(String[] args) {
         System.out.println("Consumo total "+AparatoElectrico.consumoTotal);
         AparatoElectrico bombilla=new AparatoElectrico();
-        AparatoElectrico plancha=new AparatoElectrico();
         bombilla.encender();
+        AparatoElectrico plancha=new AparatoElectrico();        
         plancha.encender();
         System.out.println(AparatoElectrico.consumoTotal);
     }
