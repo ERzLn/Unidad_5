@@ -23,7 +23,7 @@ public class AparatoElectrico {
         System.out.println("Consumo total (Kw): "+consumoTotal+" Kw");
     }
     public void pulsar(){
-        if(encendido==false)
+        if(!encendido)
         {encendido=true;
         consumoTotal+=potencia;}
         else{
