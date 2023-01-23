@@ -8,6 +8,15 @@ package hoja2herencia.u5hoja2ej2herencia;
  *
  * @author DAW122
  */
-public class EnPromocion {
+public class EnPromocion extends Articulo {
+    private int descuento;
     
+    public EnPromocion(){   
+    super();    
+}
+    public EnPromocion (int descuento, String codigo, String descripcion, double precio){
+        super(codigo, descripcion, precio);
+        this.descuento=descuento;
+        this.precio=this.precio-this.precio*descuento/100;
+    }
 }
