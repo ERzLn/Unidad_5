@@ -70,24 +70,22 @@ public class Pais {
     }
 
     public long poblacionMedia() {
-        long suma = 0;
-        int contador = 0;
+        long suma = 0;        
         for (int i = 0; i < numCiudades; i++) {
-            suma += ciudades[i].getHabitantes();
-            contador++;
+            suma += ciudades[i].getHabitantes();            
         }
-        return (suma / contador);
+        return (suma / numCiudades);
     }
 
     @Override
     public String toString() {
         String datosPais = "";
-        for (int i = 0; i <= numCiudades; i++) {
+        for (int i = 0; i < numCiudades; i++) {
             datosPais = "Ciudades de " + pais + ": \n  " +
                     ciudades[i].getNomCiudad()+":\n  Población: "+
                     ciudades[i].getHabitantes()+"\n  Latitud: "+
                     ciudades[i].getLatitud()+" Longitud: "+
-                    ciudades[i].getLongitud();
+                    ciudades[i].getLongitud()+"\n ";
         }
         return datosPais;
     }
