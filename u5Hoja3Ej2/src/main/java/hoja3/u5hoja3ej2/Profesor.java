@@ -11,19 +11,24 @@ import java.util.Scanner;
  * @author DAW122
  */
 public class Profesor extends Persona {
-    private String [] asignaturas;
+
+    private String[] asignaturas;
 
     public Profesor(int numAsignaturas) {
-        asignaturas=new String [numAsignaturas];
-    }
-    public String mostrar(){
-        Scanner entrada=new Scanner(System.in);
-        String mostrar="";
+        super();
+        asignaturas = new String[numAsignaturas];
+        Scanner entrada = new Scanner(System.in);
         for (int i = 0; i < asignaturas.length; i++) {
-            System.out.println("Introduce asignatura "+(i+1));
-            asignaturas[i]=entrada.nextLine();
-            mostrar+=asignaturas[i]+" ";
+            System.out.println("Introduce asignatura " + (i + 1));
+            asignaturas[i] = entrada.nextLine();
         }
-        return "Las asignaturas de "+super.getNombre()+" son: "+mostrar;
+    }
+
+    public String mostrar() {
+        String mostrar = "";
+        for (int i = 0; i < asignaturas.length; i++) {
+            mostrar += asignaturas[i] + " ";
+        }
+        return "Las asignaturas de " + super.getNombre() + " son: " + mostrar;
     }
 }

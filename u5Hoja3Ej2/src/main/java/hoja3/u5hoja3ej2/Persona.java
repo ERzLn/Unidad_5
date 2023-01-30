@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author DAW122
  */
-public class Persona {
+public abstract class Persona {
     private String dni,nombre, direccion;
 
     public Persona() {
@@ -21,7 +21,7 @@ public class Persona {
         System.out.println("Introduce DNI: ");
         dni=new Scanner (System.in).nextLine();
         }
-
+    
     public String getDni() {
         return dni;
     }
