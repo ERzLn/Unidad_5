@@ -16,10 +16,7 @@ public class U5Hoja3Ej1 {
     public static void main(String[] args) {
         System.out.println("Introduce el radio y la altura del cono (cm): ");
         Scanner entrada=new Scanner(System.in);
-        Cono cono=new Cono(entrada.nextDouble(),entrada.nextDouble());
-        System.out.printf("El area del cono es: %,.2fcm cuadrados \n",cono.area());
-        System.out.printf("El volumen del cono es: %,.2fcm cuadrados",cono.volumen());
-        System.out.println("Introduce el radio del cilindro y la altura(cm)");
+        
         Cilindro cilindro=new Cilindro(entrada.nextDouble(),entrada.nextDouble());
         System.out.println("El area del cilindro es: "+cilindro.area()+"cm cuadrados");
         System.out.println("El volumen del cilindro es: "+cilindro.volumen()+"cm cuadrados");

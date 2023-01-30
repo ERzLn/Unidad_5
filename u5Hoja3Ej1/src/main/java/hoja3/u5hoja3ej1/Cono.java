@@ -16,7 +16,7 @@ class Cono extends Figura {
 
     @Override
     public double area() {
-        return Math.PI * radio * (radio + altura);
+        return Math.PI * radio * (radio +(Math.sqrt(Math.pow(radio, 2)+ Math.pow(altura, 2))));
     }
 
     @Override
