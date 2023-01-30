@@ -16,15 +16,7 @@ public abstract class Figura {
     public Figura(double radio, double altura) {
         this.radio = radio;
         this.altura = altura;
-    }
-
-    public double getRadio() {
-        return radio;
-    }
-
-    public double getAltura() {
-        return altura;
-    }      
+    }   
     
     
 }
