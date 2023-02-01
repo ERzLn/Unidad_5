@@ -11,13 +11,14 @@ import java.time.LocalDate;
  * @author DAW122
  */
 public abstract class Publicacion {
-protected String titulo, autor;
-protected LocalDate fecha;
+
+    protected String titulo, autor;
+    protected LocalDate fecha;
 
     public Publicacion(String titulo, String autor, int dia, int mes, int anio) {
         this.titulo = titulo;
         this.autor = autor;
-        fecha=LocalDate.of(anio, mes, dia);
+        fecha = LocalDate.of(anio, mes, dia);
     }
 
     public String getTitulo() {
@@ -43,8 +44,8 @@ protected LocalDate fecha;
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
-@Override
+
+    @Override
     public abstract String toString();
-        
-    
+
 }

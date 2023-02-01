@@ -55,16 +55,16 @@ public class U5Hoja4Ej1 {
         System.out.println("DATOS DE LAS PUBLICACIONES:\n" + datos);
 
         for (int i = 0; i < publicaciones.length - 1; i++) {
-            if (publicaciones[i] instanceof Disco ) {
-                Disco duracionMayor=(Disco) publicaciones[0];
+            if (publicaciones[i] instanceof Disco) {
+                Disco duracionMayor = (Disco) publicaciones[0];
                 Disco aux2 = (Disco) publicaciones[i];
                 if (duracionMayor.getDuracionMinutos() < aux2.getDuracionMinutos()) {
                     duracionMayor = aux2;
 
                 }
-                if (i==(publicaciones.length-2)){
-                    System.out.println("El disco mas largo es:\n "+duracionMayor.toString());
-                    System.out.println("3 primeras letra y autor: "+duracionMayor.titulo.substring(0, 3)+" "+duracionMayor.autor);
+                if (i == (publicaciones.length - 2)) {
+                    System.out.println("El disco mas largo es:\n " + duracionMayor.toString());
+                    System.out.println("3 primeras letra y autor: " + duracionMayor.titulo.substring(0, 3) + " " + duracionMayor.autor);
                 }
             }
 
