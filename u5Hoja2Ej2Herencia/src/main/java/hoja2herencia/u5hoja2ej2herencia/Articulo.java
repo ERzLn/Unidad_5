@@ -12,6 +12,14 @@ public class Articulo {
     protected String codigo,descripcion;
     protected double precio;
 
+    public Articulo() {
+    }        
+    public Articulo(String codigo, String descripcion, double precio) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.precio = precio;
+    }
+
     public String getCodigo() {
         return codigo;
     }

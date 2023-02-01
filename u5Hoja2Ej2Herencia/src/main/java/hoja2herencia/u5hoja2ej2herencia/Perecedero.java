@@ -4,15 +4,30 @@
  */
 package hoja2herencia.u5hoja2ej2herencia;
 
-import java.time.LocalDate;
 
 /**
  *
  * @author DAW122
  */
 public class Perecedero extends Articulo {
-    private LocalDate mes, año;
+    private int mes,anio;
     
+    public Perecedero(){
+        super();
+    }
+    public Perecedero (int mes, int anio, String codigo, String descripcion, double precio){
+        this.mes=mes;
+        this.anio=anio;
+    }
+    public int getMes(){
+        return mes;
+    }
+    public void setMes(int mes){
+    this.mes=mes;
+    }
+    public int getAnio(){
+        return anio;
+    }
     
 }
 
