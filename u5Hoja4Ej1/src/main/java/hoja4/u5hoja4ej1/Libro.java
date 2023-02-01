@@ -25,7 +25,7 @@ public class Libro extends Publicacion {
 
     @Override
     public String toString() {
-        return "Libro: \n"+titulo+"\n"+autor+"\n"+fecha+"\n";
+        return "Libro: \n"+titulo+"\n"+autor+"\n"+fecha+"\n"+numPaginas;
     }
 
     
