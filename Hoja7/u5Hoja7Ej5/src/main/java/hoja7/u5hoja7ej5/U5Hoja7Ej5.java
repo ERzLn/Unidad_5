@@ -11,6 +11,20 @@ import java.util.Scanner;
  * @author Eloy
  */
 public class U5Hoja7Ej5 {
+    public class Principal {
+
+    public static double dividir(double dividendo, double divisor) throws ArithmeticException {
+        if (divisor == 0) {
+            throw new ArithmeticException("No se puede dividir por cero");
+        }
+        return dividendo / divisor;
+    }
+    /*
+      public static double dividir(double dividendo, double divisor) {
+        return dividendo / divisor;
+    }
+     */
+}
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
