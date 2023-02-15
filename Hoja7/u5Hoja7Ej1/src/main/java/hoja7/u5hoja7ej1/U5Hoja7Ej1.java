@@ -47,7 +47,7 @@ public class U5Hoja7Ej1 {
         return doubl;
     }
     public static void main(String[] args) {
-        System.out.println("Enteros: "+U5Hoja7Ej1.enteros());
-     U5Hoja7Ej1.doubles();
+        enteros();
+        doubles();
     }
 }
