@@ -14,16 +14,22 @@ import java.util.Scanner;
 public class U5Hoja7Ej3 {
 
     public static void main(String[] args) {
+        System.out.println("Introduce el rango que deseas:");
+        int a=new Scanner(System.in).nextInt();
+        int b=new Scanner(System.in).nextInt();
+        System.out.println(comprobar(a, b));
+    }
+    public static int comprobar (int a, int b) {
         Scanner entrada = new Scanner(System.in);
-        int numTeclado;
+        int numTeclado=0;
         boolean valido = false;
 
         do {
             try {
                 System.out.println("Introduce un numero:");
                 numTeclado = new Scanner(System.in).nextInt();
-                if (numTeclado < 0 || numTeclado > 100) {
-                    throw new Exception("El numero no se encuentra en un rango entre 0 y 100");
+                if (numTeclado < a || numTeclado > b) {
+                    throw new Exception("El numero no se encuentra en un rango entre "+a+" y "+b);
                 } else {
                     System.out.println("El numero se encuentra en el rango correcto");
                 }
@@ -36,5 +42,6 @@ public class U5Hoja7Ej3 {
 
             }
         } while (!valido);
-    }
+        return numTeclado;
+    } 
 }
