@@ -24,6 +24,8 @@ public class U5hoja9Ej3 {
         }catch (ArrayIndexOutOfBoundsException aio){
             System.out.println("ERROR");
             System.out.println(aio.getMessage());
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
         
     }

@@ -12,13 +12,15 @@ package hoja9.u5hoja9ej2;
 public class U5Hoja9Ej2 {
 
     public static void main(String[] args) {
-        Prueba pru=new Prueba();
-        pru=null;
         try {
+            Prueba pru=new Prueba();
+            pru=null;
             pru.getString();
         } catch (NullPointerException e){
             System.out.println(e.getMessage());
             System.out.println("El objeto es nulo");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
     }
 }

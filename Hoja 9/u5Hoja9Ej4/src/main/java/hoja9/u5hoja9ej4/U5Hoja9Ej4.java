@@ -14,7 +14,7 @@ public class U5Hoja9Ej4 {
         try {
             throw new MiExcepcion("mi propia Excepción");
         } catch (MiExcepcion e) {
-            System.out.println("Excepción: " + e.getMensaje());
+            System.out.println("Excepción: " + e.getMessage());
         }
     }
 }

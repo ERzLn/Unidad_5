@@ -39,6 +39,8 @@ public class U5Hoja8 {
                 System.out.println("Solo se admiten numeros.");
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("El numero de alumno ingresado es invalido.");
+            } catch (Exception e){
+                System.out.println(e.getMessage());
             }
         } while (!control);
 

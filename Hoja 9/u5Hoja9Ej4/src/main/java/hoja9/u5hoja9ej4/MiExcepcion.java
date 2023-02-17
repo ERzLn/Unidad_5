@@ -9,11 +9,10 @@ package hoja9.u5hoja9ej4;
  * @author DAW122
  */
 public class MiExcepcion extends Exception{
-       String mensaje;
-       public MiExcepcion(String mensaje) {
-            this.mensaje = mensaje;
+       public MiExcepcion() {
+            super();
         }
-        public String getMensaje() {
-            return mensaje;
+        public MiExcepcion (String mensaje){
+            super(mensaje);
         }
     }
