@@ -4,8 +4,6 @@
  */
 package hoja10.u5hoja10;
 
-import hoja10.u5hoja10ej2.Teclado;
-
 /**
  *
  * @author DAW122
@@ -22,7 +20,7 @@ public class Griego extends Guerrero {
     @Override
     public boolean retirarse() {
         boolean retirarse = false;
-        if (super.isHerido()) {
+        if (super.isHerido()&&!super.isMuerto()) {
             retirarse = true;
         }
         return retirarse;

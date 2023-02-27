@@ -1,4 +1,4 @@
-/*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -28,10 +28,16 @@ public abstract class Guerrero {
         this.NOMBRE = nombre;
         this.edad = g.getEdad();
         this.fuerza = g.getFuerza();
+        this.herido=g.isHerido();
+        this.muerto=g.isMuerto();
     }
 
     public String getNOMBRE() {
         return NOMBRE;
+    }
+
+    public boolean isMuerto() {
+        return muerto;
     }
 
     public int getEdad() {

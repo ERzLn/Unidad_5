@@ -4,7 +4,7 @@
  */
 package hoja10.u5hoja10;
 
-import hoja10.u5hoja10ej2.Teclado;
+import hoja10.u5hoja10.Teclado;
 
 /**
  *
